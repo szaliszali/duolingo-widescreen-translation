@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Duolingo widescreen translation
-// @version      0.1
 // @namespace    http://szaliszali.github.io/duolingo-widescreen-translation/
+// @version      0.2
 // @description  Duolingo translation optimized for widescreen displays
 // @author       You
 // @match        https://www.duolingo.com/*
