@@ -25,7 +25,7 @@ function addGlobalStyle(css) {
     head.appendChild(style);
 }
 
-addGlobalStyle(root + 'div#zendesk-wrapper {display:none;}');
+addGlobalStyle('body div#zendesk-wrapper {display:none;}');
 
 addGlobalStyle(root + 'div#document-hider {width:100%;}');
 
