@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Duolingo translation optimized for widescreen displays
 // @author       You
-// @match        https://www.duolingo.com/translation/*
+// @match        https://www.duolingo.com/*
 // @grant        none
 // ==/UserScript==
 
