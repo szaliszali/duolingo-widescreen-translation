@@ -8,6 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
+var root='#app.wiki-translation.wide ';
+var mroot=root + 'main.main-left ';
 function addGlobalStyle(css) {
     var head, style;
     head = document.getElementsByTagName('head')[0];
@@ -18,9 +20,11 @@ function addGlobalStyle(css) {
     head.appendChild(style);
 }
 
-addGlobalStyle('div#zendesk-wrapper {display:none;}');
-addGlobalStyle('div#document-hider {width:100% !important;}');
+addGlobalStyle(root + 'div#zendesk-wrapper {display:none;}');
 
-addGlobalStyle('#app.wiki-translation.wide main.main-left {max-width:100%;; padding: 0 10px 0 10px;}');
-addGlobalStyle('#app.wiki-translation.wide main.main-left section div.responsive-container {max-width:100%; }');
-addGlobalStyle('#app.wiki-translation.wide main.main-left section div.document-header-new {width:98%;width:calc(100% - 20px); }');
+addGlobalStyle(root + 'div#document-hider {width:100%;}');
+
+addGlobalStyle(mroot + '{max-width:100%; padding: 0 10px 0 10px;}');
+addGlobalStyle(mroot + 'section div.responsive-container {max-width:100%; }');
+addGlobalStyle(mroot + 'section div.document-header-new {width:98%;width:calc(100% - 20px); }');
+
