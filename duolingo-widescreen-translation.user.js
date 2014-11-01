@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Duolingo widescreen translation
 // @namespace    http://szaliszali.github.io/duolingo-widescreen-translation/
-// @version      0.2
+// @version      0.2.1
 // @description  Duolingo translation optimized for widescreen displays
 // @author       You
 // @match        https://www.duolingo.com/*
@@ -25,7 +25,7 @@ function addGlobalStyle(css) {
     head.appendChild(style);
 }
 
-addGlobalStyle(root + 'div#zendesk-wrapper {display:none;}');
+addGlobalStyle('body div#zendesk-wrapper {display:none;}');
 
 addGlobalStyle(root + 'div#document-hider {width:100%;}');
 
