@@ -45,6 +45,7 @@ window.cloneDuobotTranslation=function(id) {
     var textarea=div.find("textarea.wiki-textarea");
     if(textarea.text().length===0) {
         textarea.text(machine.text());
+        textarea.focus();
         return;
     }
     alert('textarea is not empty');
