@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Duolingo widescreen translation
 // @namespace    http://szaliszali.github.io/duolingo-widescreen-translation/
-// @version      0.2.1
+// @version      0.2.2
 // @description  Duolingo translation optimized for widescreen displays
 // @author       You
 // @match        https://www.duolingo.com/*
@@ -45,6 +45,7 @@ window.cloneDuobotTranslation=function(id) {
     var textarea=div.find("textarea.wiki-textarea");
     if(textarea.text().length===0) {
         textarea.text(machine.text());
+        textarea.focus();
         return;
     }
     alert('textarea is not empty');
@@ -56,7 +57,7 @@ $('body').on("focus","div.no-translation",function() {
 
     $(this).find('a.save-edit').text("OK");
     $(this).find('a.cancel-edit').text("Esc");
-    var container=$(this).find("div.wiki-textarea-container div:last");
+    var container=$(this).find("div.wiki-textarea-container > div:last");
     if(container.find("."+cmt).length===0) {
         container.append("<a href='javascript:window.cloneDuobotTranslation(\""+$(this).parent("div.document-sentence-sidebar").attr('id')+"\");' style='margin-left: 10px' class='"+cmt+" btn btn-standard' data-toggle='tooltip' title='' data-original-title='Clone DuoBot translation to the textarea' onclick=''>Clone</a>");
     }
