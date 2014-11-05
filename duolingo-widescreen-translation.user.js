@@ -57,7 +57,7 @@ $('body').on("focus","div.no-translation",function() {
 
     $(this).find('a.save-edit').text("OK");
     $(this).find('a.cancel-edit').text("Esc");
-    var container=$(this).find("div.wiki-textarea-container div:last");
+    var container=$(this).find("div.wiki-textarea-container > div:last");
     if(container.find("."+cmt).length===0) {
         container.append("<a href='javascript:window.cloneDuobotTranslation(\""+$(this).parent("div.document-sentence-sidebar").attr('id')+"\");' style='margin-left: 10px' class='"+cmt+" btn btn-standard' data-toggle='tooltip' title='' data-original-title='Clone DuoBot translation to the textarea' onclick=''>Clone</a>");
     }
